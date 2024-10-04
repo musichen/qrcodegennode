@@ -74,8 +74,13 @@ async function generateQRCode() {
   const filename = `${qrType}-${Date.now()}.png`;
   const filepath = path.join(qrFolder, filename);
 
-  // Generate the QR code and save as PNG
-  QRCode.toFile(filepath, data, function (err) {
+  // Generate the QR code with higher resolution
+  const options = {
+    width: 1000, // Increase width for higher resolution
+    errorCorrectionLevel: "H", // Higher error correction for better scanning
+  };
+
+  QRCode.toFile(filepath, data, options, function (err) {
     if (err) {
       console.log("Error generating QR code:", err);
     } else {
