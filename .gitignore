@@ -1,0 +1,51 @@
+# Ignore node modules
+node_modules/
+qrcodes/
+
+# Ignore lock files for both npm and yarn (choose to keep one if needed)
+package-lock.json
+yarn.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore environment variable files
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build output directories
+dist/
+build/
+tmp/
+out/
+
+# Ignore cache directories
+.cache/
+.nyc_output/
+coverage/
+*.tsbuildinfo
+.vscode/
+
+# Ignore IDE-specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
